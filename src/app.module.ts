@@ -6,9 +6,11 @@ import { CoModule } from './s/co/co.module';
 import { UsersService } from './users/users.service';
 import { UsersModule } from './users/users.module';
 import { UsersController } from './users/users.controller';
+import { TasksService } from './tasks/tasks.service';
 @Module({
   imports: [AuthModule, TasksModule, CoModule, UsersModule],
   controllers: [TasksController, UsersController],
-  providers: [UsersService],
+  providers: [UsersService, TasksService],
 })
 export class AppModule {}
+
